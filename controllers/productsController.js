@@ -31,7 +31,7 @@ const controller = {
 
             //Al new body le faltan 2 campos de la base de datos, el id y la imagen por lo que vamos a ponerlos:
             id: products[products.length - 1].id + 1, //el array de la base de datos tiene 8 elementos, nos queremos posicionar en el índice 7(el último del array) por lo tanto si el length es = 8, al restar 1 llegamos a la posición 7 del array que corresponde al último elemento
-            name: req.body.name
+
             // ...req.body //sintaxis spread nos permite tener todos los elementos del objeto body body.name, body.price... sin tener que escribir 1 por 1
             //Así el new product va a tener todo lo del body
         }
