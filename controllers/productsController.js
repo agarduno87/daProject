@@ -24,7 +24,7 @@ const controller = {
     create: (req, res) => {
         // res.send('hola mundo')
         // res.render('product-create-form')
-        res.render('createPrueba')
+        res.render('product-create-form')
     },
 
     store: (req, res) => {

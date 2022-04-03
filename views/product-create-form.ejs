@@ -14,51 +14,23 @@
 </head>
 
 <body>
-    <!-- <header class="header">
-        <%- include('partials/header.ejs') %>
-    </header> -->
 
-    <div class="container products-wrapper">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="products-title">Formulario de creación de productos</h2>
-            </div>
-        </div>
-        <div class="col-12">
-            <form action="/products/store" method="post" enctype="multipart/form-data">
-                <!-- el multiform es indispensable para que el formulario pueda enviar archivos -->
-                <div class="row product-detail">
-                    <div class="col-12 col-md-6">
-                        <label for="name" class="form-label">Nombre del producto:</label>
-                        <input type="text" id="name" name="name">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="price" class="form-label">Precio del producto:</label>
-                        <input type="number" id="price" name="price" placeholder="Ej: 5678" class="form-input">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="discount" class="form-label">Descuento:</label>
-                        <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
-                    </div>
-                    <div class="col-12">
-                        <label for="description" class="form-label">Descripción:</label>
-                        <textarea name="description" id="description" class="form-input"></textarea>
-                    </div>
-                    <!-- <div class="col-12">
-                        <label for="image" class="form-label">Imagen</label>
-                        <input type="file" accept=".png,.jpg" name="image" class="form-control" id="image" required />
-                    </div> -->
-                    <div class="col-12">
-                        <button type="submit" class="buy-now-button">Guardar producto</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <form action="/products/store" method="post">
 
-    </div>
-    <footer>
-        <%- include('partials/footer.ejs') %>
-    </footer>
+
+        <input type="text" name="name" id="name">
+        <br>
+
+        <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido">
+        </div>
+        <br>
+
+        <button type="submit" class="buy-now-button">Guardar producto</button>
+
+
+    </form>
 
 </body>
 
