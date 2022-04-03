@@ -32,8 +32,7 @@ const controller = {
         const newProduct = {
             // id: 1,
             // res.send(req.body.name)
-            name: req.body.name,
-            apellido: req.body.apellido
+            ...req.body
         }
         products.push(newProduct) //agrega al arreglo el producto que acabamos de insertar
 

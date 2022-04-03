@@ -44,5 +44,13 @@
     {
         "name": "Manuel Alejandro",
         "apellido": "garcia"
+    },
+    {
+        "name": "pruebas",
+        "apellido": "pruebas"
+    },
+    {
+        "name": "req body",
+        "apellido": "req"
     }
 ]
