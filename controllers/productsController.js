@@ -40,6 +40,7 @@ const controller = {
         //     // express validator
         fs.writeFileSync(productsFilePath, JSON.stringify(products)) //Esto es necesario pero no entendí para qué se usa
         res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
+        console.log(req.body)
     },
 
     edit: (req, res) => {
@@ -79,3 +80,4 @@ const controller = {
 };
 
 module.exports = controller;
+

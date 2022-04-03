@@ -4,7 +4,8 @@
   "description": "- [Zebra - Porsche Rental](#zebra---porsche-rental)\r \t- [Introduction](#introduction)\r \t- [Project Details](#project-details)\r \t\t- [Live Preview and Screenshots](#live-preview-and-screenshots)\r \t\t- [How to get started](#how-to-get-started)\r \t\t- [Built with](#built-with)\r \t- [Requirements](#requirements)\r \t- [Sprints](#sprints)\r \t\t- [1. Wireframing + Sketch](#1-wireframing--sketch)\r \t\t- [2. HTML + CSS](#2-html--css)\r \t\t- [3. Template Engines](#3-template-engines)\r \t\t- [4. JSON + HTTP request methods](#4-json--http-request-methods)\r \t\t- [5. Middleware + Authentication](#5-middleware--authentication)\r \t\t- [6. Data Base](#6-data-base)\r \t\t- [7. Validations](#7-validations)\r \t\t- [8. APIs + React](#8-apis--react)\r \t- [Developers](#developers)\r \t- [Acknowledgements](#acknowledgements)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js"
   },
   "repository": {
     "type": "git",

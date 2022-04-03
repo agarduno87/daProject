@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var multer = require('multer')
+var multer = require('multer');
 
 var mainRouter = require('./routes/main');
 var productsRouter = require('./routes/products')
@@ -44,8 +44,12 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Servidor funcionando en el puerto 3000')
 })
+
+// app.listen(3000, () => {
+//   console.log('Servidor funcionando en el puerto 3000')
+// })
 
 module.exports = app;
