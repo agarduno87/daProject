@@ -25,12 +25,12 @@
             </div>
         </div>
         <div class="col-12">
-            <form action="/products" method="post" enctype="multipart/form-data">
+            <form action="/products/store" method="post" enctype="multipart/form-data">
                 <!-- el multiform es indispensable para que el formulario pueda enviar archivos -->
                 <div class="row product-detail">
                     <div class="col-12 col-md-6">
                         <label for="name" class="form-label">Nombre del producto:</label>
-                        <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+                        <input type="text" id="name" name="name">
                     </div>
                     <div class="col-12 col-md-6">
                         <label for="price" class="form-label">Precio del producto:</label>

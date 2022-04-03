@@ -10,7 +10,7 @@ router.get('/edit/:id?', productsController.edit) //Muestra el formulario para e
 router.get('/shoppingcar', productsController.shoppingCar)
 router.get('/search', productsController.search)
 
-router.post('/', productsController.store) //este es el envío de los datos del create
+router.post('/store', productsController.store) //este es el envío de los datos del create
 
 router.put('/edit/:id?', productsController.update) //Muestra el formulario para editar productos
 
