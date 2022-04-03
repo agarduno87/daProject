@@ -23,13 +23,14 @@ const controller = {
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
 
-        if (req.file == undefined) { //Acá para validar podemos poner varias opciones tipo "que sea menor en tamaño", "sea más grande que...etc"
-            console.log(req.file) //nos entrega todos los datos del file, sino se sube un file, entonces el resultado de este es undefined
+        if (req.file != undefined) { //Acá para validar podemos poner varias opciones tipo "que sea menor en tamaño", "sea más grande que...etc". 
+            //nos entrega todos los datos del file, sino se sube un file, entonces el resultado de este es undefined
+            res.redirect("/users/login") //Redirige después de guarda un producto, se tiene que poner el path "completo"
+
         }
         else { //sino llega ningún file entonces recargamos de nuevo la página
-            res.render('/users/signup')
+            res.render('signup')
         }
-        res.redirect("/users/login")
     }
 }
 
