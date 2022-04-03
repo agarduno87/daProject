@@ -10,53 +10,42 @@
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
-    <title>Signup</title>
+    <title>Registro</title>
 </head>
 
 <body>
-   
-    <div class="container products-wrapper">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="products-title">Formulario de creación de usuarios</h2>
-            </div>
+
+    <form action="/users/signup" method="post" enctype="multipart/form-data">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="name" id="name">
+        <br>
+
+        <div>
+            <label for="price">Apellido</label>
+            <input type="text" id="Apellido" name="Apellido">
         </div>
-        <div class="col-12">
-            <form action="/users/signup" method="post" enctype="multipart/form-data">
-                <!-- el multiform es indispensable para que el formulario pueda enviar archivos -->
-                <div class="row product-detail">
-                    <div class="col-12 col-md-6">
-                        <label for="Nombre" class="form-label">Nombre:</label>
-                        <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="Apellido" class="form-label">Apellido</label>
-                        <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="Correo" class="form-label">Correo:</label>
-                        <input type="email" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
-                    </div>
-                    <div class="col-12">
-                        <label for="Contrasena" class="form-label">Contraseña:</label>
-                        <textarea name="password" id="description" class="form-input"></textarea>
-                    </div>
-                    <!-- <div class="col-12">
-                        <label for="image" class="form-label">Imagen</label>
-                        <input type="file" accept=".png,.jpg" name="image" class="form-control" id="image" required />
-                    </div> -->
-                    <div class="col-12">
-                        <button type="submit" class="buy-now-button">Registrarme</button>
-                    </div>
-                </div>
-            </form>
+        <br>
+
+        <label for="category">E-mail</label>
+        <input type="email" name="email" id="email">
+        <br>
+
+        <div>
+            <label for="description">Contraseña</label>
+            <input type="password" id="constrasena" name="constrasena">
+        </div>
+        <br>
+
+        <div>
+            <label for="">Imagen</label>
+            <input type="file" name="imagenUsuario">
         </div>
 
-    </div>
+        <button type="submit" class="buy-now-button">Registrarse</button>
 
-    <footer>
-        <%- include('partials/footer.ejs') %>
-    </footer>
+
+    </form>
 
 </body>
 

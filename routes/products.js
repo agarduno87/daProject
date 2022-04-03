@@ -16,7 +16,7 @@ const storage = multer.diskStorage({//La constante hace uso del módulo y hace u
 
     destination: (req, file, cb) => //destination recibe una funcion que recibe el request, el archivo a subir y un callback cb
     {
-        cb(null, path.join(__dirname, '../data/imgData'))  //el primer parámetro siempre null, el segundo el path de la carpeta. El dirname nos posiciona en el punto donde estamos
+        cb(null, path.join(__dirname, '../data/imgProductsData'))  //el primer parámetro siempre null, el segundo el path de la carpeta. El dirname nos posiciona en el punto donde estamos
     },
 
     filename: (req, file, cb) => { //El filename es la propiedad que nombra el archivo
@@ -40,7 +40,7 @@ router.get('/edit/:id?', productsController.edit) //Muestra el formulario para e
 router.get('/shoppingcar', productsController.shoppingCar)
 router.get('/search', productsController.search)
 
-router.post('/store', upload.single('imagenUsuario'), productsController.store) //este es el envío de los datos del create
+router.post('/store', upload.single('imagenProducto'), productsController.store) //este es el envío de los datos del create
 
 router.put('/edit/:id?', productsController.update)
 

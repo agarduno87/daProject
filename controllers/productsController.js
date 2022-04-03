@@ -37,10 +37,12 @@ const controller = {
 
         //     // express validator
         fs.writeFileSync(productsFilePath, JSON.stringify(products)) //Esto es necesario pero no entendí para qué se usa
-        res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
 
-        if (req.file == undefined) { //Acá para validar podemos poner varias opciones tipo "que sea menor en tamaño", "sea más grande que...etc"
-            console.log(req.file) //nos entrega todos los datos del file, sino se sube un file, entonces el resultado de este es undefined
+        //Si no subimos archivo entonces nos crea un bucle que redirige al formulario hasta que subamos una foto
+        if (req.file != undefined) { //Acá para validar podemos poner varias opciones tipo "que sea menor en tamaño", "sea más grande que...etc". 
+            //nos entrega todos los datos del file, sino se sube un file, entonces el resultado de este es undefined
+            res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
+
         }
         else { //sino llega ningún file entonces recargamos de nuevo la página
             res.render('product-create-form')
