@@ -56,6 +56,11 @@ Considering this, Zebra wants to revamp its website and has allowed us to start 
 3. Install dependencies
    ```bash
    npm i
+   npm i express
+   npm i ejs
+   npm i multer
+   npm i method-override
+   npm i cookie-parser
    ```
 4. Start project
    ```bash
