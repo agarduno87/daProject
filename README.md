@@ -111,7 +111,7 @@ Julio Añoveros
 Alejandro  
 
 - GitHub [@AlexDDks](https://github.com/AlexDDks)
-- LinkedIn [@AlexDDks](https://https://www.linkedin.com/in/magarciaa92)
+- LinkedIn [@AlexDDks](https://www.linkedin.com/in/magarciaa92)
 
 Antonio Garduño
 
