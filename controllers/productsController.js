@@ -31,8 +31,10 @@ const controller = {
             id: products[products.length - 1].id + 1, //Eso es para obtener el id nuevo del producto y colocárselo, debe ser el último id
             //el id es base cero, entonces el último id si son 16 elementos sería 15. entonces se agarra el length que es 16, el id sería 15. por eso es length-1.
             //entonces el último id seria el products.length-1 + 1. Hasta ahora sólo me da el id +1 como si fuera una concatenación
-            ...req.body
+            ...req.body,
+            image: req.file.filename //Este es el nombre ya renombrado del archivo
         }
+
         products.push(newProduct) //agrega al arreglo el producto que acabamos de insertar
 
         //     // express validator

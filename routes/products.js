@@ -3,7 +3,7 @@ const router = express.Router();
 const productsController = require('../controllers/productsController');
 const path = require('path')  //utilizamos el módulo nativo de node que maneja los p*aths
 
-const { diskStorage } = require('multer')
+const { diskStorage } = require('multer') //No me acuerdo para qué sirve xD
 
 //***MULTER***//
 const multer = require('multer') //Se requiere la librería multer en este archivo, porque acá se utilizará
@@ -16,16 +16,17 @@ const storage = multer.diskStorage({//La constante hace uso del módulo y hace u
 
     destination: (req, file, cb) => //destination recibe una funcion que recibe el request, el archivo a subir y un callback cb
     {
-        cb(null, path.join(__dirname, '../data/imgProductsData'))  //el primer parámetro siempre null, el segundo el path de la carpeta. El dirname nos posiciona en el punto donde estamos
+        cb(null, path.join(__dirname, '../public/images'))  //el primer parámetro siempre null, el segundo el path de la carpeta. El dirname nos posiciona en el punto donde estamos
     },
 
     filename: (req, file, cb) => { //El filename es la propiedad que nombra el archivo
 
-        console.log(file)
-        const newFileName = 'newFileName' + Date.now() + path.extname(file.originalname);  // El nombre que le pusimos puede ser el que queramos pero para no tener problemas con que se sobreescriban 2__
+        // console.log(file)
+        // const newFileName = 'newFileName' + Date.now() + path.extname(file.originalname);  // El nombre que le pusimos puede ser el que queramos pero para no tener problemas con que se sobreescriban 2__
         //entonces lo que hacemos es concatenar el objeto Date, el cual nos da una fecha que cambia mil veces por segundo(fecha en ms), y le concatenamos el nombre original del archivo con el path.ext (originalname así aparece en el objeto del console log)
-        cb(null, newFileName) //El primer parámetro siempre es null y el segundo el nombre del archivo
-        // console.log(newFileName)
+        //cb(null, newFileName) //Así viene en el playgroundEl primer parámetro siempre es null y el segundo el nombre del archivo
+        cb(null, file.fieldname + '-' + Date.now()) //Así me lo enseñaron en la clase en vivo
+        //El fieldname toma el nombre que se le puso en el formulario, en este caso image
     }
 })
 

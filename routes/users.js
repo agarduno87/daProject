@@ -19,11 +19,8 @@ const storage = multer.diskStorage({//La constante hace uso del módulo y hace u
 
     filename: (req, file, cb) => { //El filename es la propiedad que nombra el archivo
 
-        console.log(file)
-        const newFileName = 'newFileName' + Date.now() + path.extname(file.originalname);  // El nombre que le pusimos puede ser el que queramos pero para no tener problemas con que se sobreescriban 2__
-        //entonces lo que hacemos es concatenar el objeto Date, el cual nos da una fecha que cambia mil veces por segundo(fecha en ms), y le concatenamos el nombre original del archivo con el path.ext (originalname así aparece en el objeto del console log)
-        cb(null, newFileName) //El primer parámetro siempre es null y el segundo el nombre del archivo
-        // console.log(newFileName)
+        cb(null, file.fieldname + '-' + Date.now()) //Así me lo enseñaron en la clase en vivo
+
     }
 })
 
