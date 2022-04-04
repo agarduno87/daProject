@@ -22,24 +22,34 @@ const controller = {
         res.render("detail", { product })//se comparte la variable products con la vista detail
     },
     create: (req, res) => {
-        // res.send('hola mundo')
-        // res.render('product-create-form')
         res.render('product-create-form')
     },
 
     store: (req, res) => {
         // Do the magic
         const newProduct = {
-            // id: 1,
-            // res.send(req.body.name)
-            ...req.body
+            id: products[products.length - 1].id + 1, //Eso es para obtener el id nuevo del producto y colocárselo, debe ser el último id
+            //el id es base cero, entonces el último id si son 16 elementos sería 15. entonces se agarra el length que es 16, el id sería 15. por eso es length-1.
+            //entonces el último id seria el products.length-1 + 1. Hasta ahora sólo me da el id +1 como si fuera una concatenación
+            ...req.body,
+            image: req.file.filename //Este es el nombre ya renombrado del archivo
         }
+
         products.push(newProduct) //agrega al arreglo el producto que acabamos de insertar
 
         //     // express validator
         fs.writeFileSync(productsFilePath, JSON.stringify(products)) //Esto es necesario pero no entendí para qué se usa
-        res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
-        console.log(req.body)
+
+        //Si no subimos archivo entonces nos crea un bucle que redirige al formulario hasta que subamos una foto
+        if (req.file != undefined) { //Acá para validar podemos poner varias opciones tipo "que sea menor en tamaño", "sea más grande que...etc". 
+            //nos entrega todos los datos del file, sino se sube un file, entonces el resultado de este es undefined
+            res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
+
+        }
+        else { //sino llega ningún file entonces recargamos de nuevo la página
+            res.render('product-create-form')
+        }
+
     },
 
     edit: (req, res) => {
@@ -56,7 +66,7 @@ const controller = {
         products[idn] = { //accedemos al producto del índice "n"
             id,
             ...req.body, //copia todo del body
-            image: products[idn].image
+            // image: products[idn].image
         }
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //no se crea una nueva variable sino que se actualiza con la nueva información nueva, todo está en esta línea
         res.redirect("/products/detail/" + id) //redirigimos a este path

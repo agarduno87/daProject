@@ -8,49 +8,27 @@
         "image": "porsche-nineeleven-one.png"
     },
     {
-        "id": "8",
-        "name": "Auto 8:j",
-        "price": "1",
-        "description": "descripción",
-        "image": "porsche-nineeleven-one.png"
-    },
-    {
-        "id": "81"
-    },
-    {},
-    {
-        "id": null
-    },
-    {
-        "id": 1
-    },
-    {
-        "id": 2
-    },
-    {
-        "name": "Manuel Alejandro García Andrade"
-    },
-    {
-        "name": "Manuel Alejandro"
-    },
-    {
-        "name": "prueba3",
-        "apellido": "apellidoprueba3"
-    },
-    {
-        "name": "prueba 4",
-        "apellido": "apellido4"
-    },
-    {
+        "id": 8,
         "name": "Manuel Alejandro",
-        "apellido": "garcia"
+        "price": "78",
+        "category": "Lujo",
+        "description": "9",
+        "image": "imagenProducto-1649034374948"
     },
     {
-        "name": "pruebas",
-        "apellido": "pruebas"
+        "id": 9,
+        "name": "Manuel Alejandro",
+        "price": "78",
+        "category": "i",
+        "description": "Un bocho bonito y antaño",
+        "image": "imagenProducto-1649034414263"
     },
     {
-        "name": "req body",
-        "apellido": "req"
+        "id": 10,
+        "name": "prueba 4",
+        "price": "4",
+        "category": "4",
+        "description": "4",
+        "image": "imagenProducto-1649035272053"
     }
 ]
