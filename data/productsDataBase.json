@@ -30,5 +30,13 @@
         "category": "4",
         "description": "4",
         "image": "imagenProducto-1649035272053"
+    },
+    {
+        "id": 11,
+        "name": "Manuel Alejandro",
+        "price": "78",
+        "category": "i",
+        "description": "9",
+        "image": "imagenProducto-1649035517561"
     }
 ]
