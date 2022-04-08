@@ -66,12 +66,11 @@ const controller = {
         products[idn] = { //accedemos al producto del índice "n"
             id,
             ...req.body, //copia todo del body
-            image: products[idn].image //Aun no implementamos imagen en edit
+            image: products[idn].image
         }
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //no se crea una nueva variable sino que se actualiza con la nueva información nueva, todo está en esta línea
         res.redirect("/products/detail/" + id) //redirigimos a este path
     },
-
     shoppingCar: (req, res, next) => {
         res.render('shoppingCar');
     },

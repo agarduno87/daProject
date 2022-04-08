@@ -17,50 +17,58 @@
     <header class="header">
         <%- include('partials/header.ejs') %>
     </header>
+
+
+
+    <h2 class="products-title">Estás editando: <i>
+            <%= product.name %>
+        </i></h2>
+
     <main class="formulario">
-        <form action="/register" method="POST">
-
-
+        <!-- Si bien se envía como post, se le aclara en el action que viajará por PUT -->
+        <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST">
             <section class="menu">
-                <h2>Ingresa</h2>
-                <h2 class="products-title">Estás editando: <i>
-                        <%= product.name %>
-                    </i></h2>
-
-
+                <h2>Edita un producto</h2>
                 <div class="clase1">
-                    <!-- Si bien se envía como post, se le aclara en el action que viajará por PUT -->
-                    <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST">
 
-                        <!-- <label for="name" class="form-label">Nombre del producto:</label> -->
-                        <input class="casilla" type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok"
-                            class="form-input" value="<%= product.name %>">
-                </div>
+                    <div class='clase1'>
+                        <!-- <label for="nombre">Nombre del producto</label> -->
+                        <input class="casilla" type="text" name="name" id="name" placeholder="Nombre del producto">
+                        <br>
+                        <div>
 
-                <div class="clase1">
-                    <!-- <label for="price" class="form-label">Precio del producto:</label> -->
-                    <input class="casilla" type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input"
-                        value="<%= product.price %>">
-                </div>
+                            <div class='clase1'>
+                                <!-- <label for="price">Precio</label> -->
+                                <input class="casilla" type="number" id="price" name="price"
+                                    placeholder="Precio del producto">
+                            </div>
 
-                <div class="clase1">
-                    <!-- <label for="description" class="form-label">Descripción:</label> -->
-                    <textarea class="casilla" name="description" id="description"
-                        class="form-input"><%= product.description %></textarea>
-                </div>
+                            <div class='clase1'>
+                                <!-- <label for="category">Categoria</label> -->
+                                <input class="casilla" type="text" name="category" id="category"
+                                    placeholder="Elije la categoría">
+                                <br>
+
+                                <div class='clase1'>
+                                    <!-- <label for="category">Categoria</label> -->
+                                    <input class="casilla" type="text" name="description" id="description"
+                                        placeholder="Descripción">
+                                    <br>
+                                    <div class='clase1'>
+                                        <!-- <label for="">Imagen</label> -->
+                                        <input class="casilla" type="file" accept=".png,.jpg" name="imagenProducto"
+                                            placeholder="Imagen del producto">
+                                    </div>
 
 
-
-
-                <div class="boton2">
-                    <button type="submit" class="buy-now-button">Guardar producto</button>
-                </div>
+                                    <button type="submit" class="boton2">Guardar producto</button>
             </section>
+
         </form>
     </main>
-
     <footer>
         <%- include('partials/footer.ejs') %>
+
     </footer>
 
 </body>

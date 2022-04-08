@@ -1,1 +1,18 @@
-[{"id":"7111","name":"prueba 2a","price":"1","description":"Carro de prueba","image":"imagenProducto-1649439402211"},{"id":"71111","name":"prueba del bochido","price":"1","category":"Lujo","description":"bochido de luisito comunica","image":"imagenProducto-1649441015650"}]
+[
+ {
+  "id": "7111",
+  "name": "Auto prueba edit",
+  "price": "76",
+  "category": "7878",
+  "description": "i"
+ },
+ {
+  "id": "71111",
+  "name": "prueba",
+  "price": "78",
+  "category": "9",
+  "description": "bOCHIDO DE LUISITO COMUNICA",
+  "imagenProducto": "bocho.jpg",
+  "image": "imagenProducto-1649443739689"
+ }
+]
