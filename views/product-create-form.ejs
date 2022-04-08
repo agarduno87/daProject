@@ -10,43 +10,60 @@
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
-    <title>Product details</title>
+    <title>Log in</title>
 </head>
 
 <body>
+    <header class="header">
+        <%- include('partials/header.ejs') %>
+    </header>
+    <main class="formulario">
 
-    <form action="/products/store" method="post" enctype="multipart/form-data">
+        <form action="/products/store" method="post" enctype="multipart/form-data">
 
-        <label for="nombre">Nombre del producto</label>
-        <input type="text" name="name" id="name">
-        <br>
+            <section class="menu">
+                <h2>Crea un producto</h2>
+                <div class='clase1'>
+                    <!-- <label for="nombre">Nombre del producto</label> -->
+                    <input class="casilla" type="text" name="name" id="name" placeholder="Nombre del producto">
+                    <br>
+                    <div>
+                        <div class='clase1'>
+                            <!-- <label for="price">Precio</label> -->
+                            <input class="casilla" type="number" id="price" name="price"
+                                placeholder="Precio del producto">
+                        </div>
+                        <br>
+                        <div class='clase1'>
+                            <!-- <label for="category">Categoria</label> -->
+                            <input class="casilla" type="text" name="category" id="category"
+                                placeholder="Elije la categoría">
+                            <br>
 
-        <div>
-            <label for="price">Precio</label>
-            <input type="number" id="price" name="price">
-        </div>
-        <br>
+                            <div class='clase1'>
+                                <!-- <label for="description">Description</label> -->
+                                <input class="casilla" type="text" id="description" name="description"
+                                    placeholder="Descripción del producto">
+                            </div>
+                            <br>
 
-        <label for="category">Categoria</label>
-        <input type="text" name="category" id="category">
-        <br>
-
-        <div>
-            <label for="description">Description</label>
-            <input type="text" id="description" name="description">
-        </div>
-        <br>
-
-        <div>
-            <label for="">Imagen</label>
-            <input type="file" accept=".png,.jpg" name="imagenProducto">
-        </div>
-
-        <button type="submit" class="buy-now-button">Guardar producto</button>
+                            <div class='clase1'>
+                                <!-- <label for="">Imagen</label> -->
+                                <input class="casilla" type="file" accept=".png,.jpg" name="imagenProducto"
+                                    placeholder="Imagen del producto">
+                            </div>
 
 
-    </form>
 
+                            <button type="submit" class="boton2">Guardar producto</button>
+            </section>
+
+        </form>
+    </main>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+
+    </footer>
 </body>
 
 </html>

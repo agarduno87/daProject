@@ -14,38 +14,54 @@
 </head>
 
 <body>
+    <header class="header">
+        <%- include('partials/header.ejs') %>
+    </header>
 
-    <form action="/users/signup" method="post" enctype="multipart/form-data">
+    <main class="formulario">
 
-        <label for="nombre">Nombre</label>
-        <input type="text" name="name" id="name">
-        <br>
+        <form action="/users/signup" method="post" enctype="multipart/form-data">
+            <section class="menu">
+                <h2>Regístrate</h2>
+                <div class='clase1'>
+                    <!-- <label for="nombre">Nombre</label> -->
+                    <input class='casilla' type="text" name="name" id="name" placeholder="Ingrese su nombre">
+                    <div>
+                        <br>
 
-        <div>
-            <label for="price">Apellido</label>
-            <input type="text" id="Apellido" name="Apellido">
-        </div>
-        <br>
+                        <div class='clase1'>
+                            <!-- <label for="price">Apellido</label> -->
+                            <input class='casilla' type="text" id="Apellido" name="Apellido"
+                                placeholder="Ingrese su apellido">
+                        </div>
+                        <br>
 
-        <label for="category">E-mail</label>
-        <input type="email" name="email" id="email">
-        <br>
+                        <!-- <label for="category">E-mail</label> -->
+                        <input class='casilla' type="email" name="email" id="email" placeholder="Ingrese su email">
+                        <br>
 
-        <div>
-            <label for="description">Contraseña</label>
-            <input type="password" id="constrasena" name="constrasena">
-        </div>
-        <br>
+                        <div class='clase1'>
+                            <!-- <label for="description">Contraseña</label> -->
+                            <input class='casilla' type="password" id="constrasena" name="constrasena"
+                                placeholder="Ingrese su contraseña">
+                        </div>
+                        <br>
 
-        <div>
-            <label for="">Imagen</label>
-            <input type="file" accept=".png,.jpg" name="imagenUsuario" id="imagenUsuario">
-        </div>
+                        div class='clase1'>
+                        <!-- <label for="">Imagen</label> -->
+                        <input class="casilla" type="file" accept=".png,.jpg" name="imagenUsuario"
+                            placeholder="Foto de perfil">
+                    </div>
 
-        <button type="submit" class="buy-now-button">Registrarse</button>
+                    <button type="submit" class="boton2">Registrarse</button>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <%- include('partials/footer.ejs') %>
 
+    </footer>
 
-    </form>
 
 </body>
 
