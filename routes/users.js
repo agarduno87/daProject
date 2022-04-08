@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const { diskStorage } = require('multer');
-const path = require('path');
+const { diskStorage } = require('multer')
+const path = require('path')
 
 //***MULTER***//
+const multer = require('multer') //Se requiere la librería multer en este archivo, porque acá se utilizará
+//se le dice a multer dónde queremos y con qué nombre se guardan los archivos
+// Con diskStorage se le dice a multer dónde se almacenará (en qué parte del servidor) se almacenan los archivos y qué nombre asignarle a los mismos
+
+const storage = multer.diskStorage({//La constante hace uso del módulo y hace uso del método storage
     // Dentro de este método va a recibir un objeto literal con 2 propiedas, el primero destination: que indica dónde guardar__
     // y filename que nombra del archivo
 
@@ -12,12 +17,12 @@ const path = require('path');
         cb(null, path.join(__dirname, '../data/imgUsersData'))  //el primer parámetro siempre null, el segundo el path de la carpeta. El dirname nos posiciona en el punto donde estamos
     },
 
-    filename (req, file, cb) => { //El filename es la propiedad que nombra el archivo
+    filename: (req, file, cb) => { //El filename es la propiedad que nombra el archivo
 
         cb(null, file.fieldname + '-' + Date.now()) //Así me lo enseñaron en la clase en vivo
 
     }
-});
+})
 
 const upload = multer({ storage: storage }) //o {storage si es el mismo nombre} Acá esta constante se ejecuta toda la configuración que programamos de multer
 //Acá acabamos, y nos vamos a la ruta del post que ejecuta el formulario
