@@ -1,20 +1,20 @@
 @import url('https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap');
 
-*{
+* {
     font-family: 'Montserrat', sans-serif;
     box-sizing: content-box;
 }
 
-body{
+body {
     background-color: white;
-    font-family:'Lucida Sans';
+    font-family: 'Lucida Sans';
     font-size: 11px;
     margin: 0;
-    font-weight: normal;   
+    font-weight: normal;
 }
 
-header{
+header {
     background-color: black;
     /* border: 2px red solid; */
     position: fixed;
@@ -23,16 +23,16 @@ header{
     width: 100%;
 }
 
-.container{
+.container {
     width: 100%;
-margin:0 auto;
-display: flex;
-justify-content: space-between;
-/* border: solid 2px green; */
-align-items: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* border: solid 2px green; */
+    align-items: center;
 }
 
-.logo{
+.logo {
     width: 20%;
     padding: 15px 0 15px 35px;
     /* color: white; */
@@ -43,111 +43,111 @@ align-items: center;
     text-decoration: underline; */
 }
 
-.header a{
-    color:white;
+.header a {
+    color: white;
     text-decoration: none;
 }
 
-.navigation{
+.navigation {
     padding-right: 2%;
 }
 
-.navigation ul{
+.navigation ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.navigation ul li{
+.navigation ul li {
     display: inline-block;
 }
 
-.navigation ul li a{
+.navigation ul li a {
     display: block;
-padding: 0.5rem 0.5rem;
-transition: all .3s linear;
-border-radius: 5%;
+    padding: 0.5rem 0.5rem;
+    transition: all .3s linear;
+    border-radius: 5%;
 }
 
-.navigation ul li a:hover{
-    background-color:rgba(204, 198, 198, 0.6);
+.navigation ul li a:hover {
+    background-color: rgba(204, 198, 198, 0.6);
 }
 
-.navigation ul li i{
+.navigation ul li i {
     font-size: 15px;
     opacity: .3;
     transition: all .3s linear;
 }
 
-.navigation ul li i:hover{
+.navigation ul li i:hover {
     opacity: 1;
 }
 
-.formulario{
+.formulario {
     display: flex;
     height: 80vh;
     /* background-image:url(/img/a.jpg); */
-    background-image:url(/images/34737-n.jpg);
+    background-image: url(/images/34737-n.jpg);
     /* background-color: white; */
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
     padding-top: 83px;
-    }
+}
 
-.menu{
+.menu {
     text-align: center;
-/* background-color: rgb(0, 0, 0); */
-width: 200px;
-margin-left: 350px;
+    /* background-color: rgb(0, 0, 0); */
+    width: 200px;
+    margin-left: 350px;
 
-margin-top: 55px;
+    margin-top: 55px;
 
-/* border: solid 2px red; */
-/* border: solid 5px black; */
+    /* border: solid 2px red; */
+    /* border: solid 5px black; */
     box-shadow: 5px 5px 5px 3px rgba(14, 13, 13, 0.9);
     border-radius: 1.5px;
 
- background-color: black;
+    background-color: black;
 
 }
 
-h2{
+h2 {
     text-align: center;
     color: white;
     font-size: 20px;
     font-weight: 400;
-    
+
 }
 
-.clase1{
-text-align: center;
-    width:100%;
-    padding:0px;
+.clase1 {
+    text-align: center;
+    width: 100%;
+    padding: 0px;
     margin-top: 2%;
     border-radius: 2px;
     margin-bottom: 2%;
 }
 
-.contra{
+.contra {
     font-size: 12px;
     text-align: center;
     text-decoration: underline;
     color: white;
     display: block;
-    padding:10px 0 3px 0;
+    padding: 10px 0 3px 0;
 }
 
-.contra1{
+.contra1 {
     font-size: 11px;
     text-align: center;
     text-decoration: underline;
     font-style: italic;
     color: white;
     display: block;
-    padding:10px 0 10px 0;
+    padding: 10px 0 10px 0;
 }
 
-.boton{
+.boton {
     font-style: normal;
     border-radius: 5px;
     color: white;
@@ -158,16 +158,16 @@ text-align: center;
 
 }
 
-.boton a{
+.boton a {
     text-decoration: none;
     color: black;
 }
 
-.boton:hover{
-    background-color:rgba(141, 141, 141, 0.6);
+.boton:hover {
+    background-color: rgba(141, 141, 141, 0.6);
 }
 
-.boton2{
+.boton2 {
     font-style: normal;
     border-radius: 5px;
     background-color: white;
@@ -178,22 +178,21 @@ text-align: center;
 
 }
 
-.boton2 a{
+.boton2 a {
     text-decoration: none;
     color: black;
 }
 
-.boton2:hover{
-    background-color:rgba(141, 141, 141, 0.6);
+.boton2:hover {
+    background-color: rgba(141, 141, 141, 0.6);
 }
 
-h3{
-    color:black;
+h3 {
+    color: black;
 }
-    
-    .texto{
-color: white;
-margin: auto;
-font-size: 28px;
-    }
 
+.texto {
+    color: white;
+    margin: auto;
+    font-size: 28px;
+}

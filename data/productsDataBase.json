@@ -1,26 +1,9 @@
 [
     {
-        "id": 7,
-        "name": "Auto 7",
-        "price": 1,
-        "category": "cayenne",
+        "id": "7",
+        "name": "Auto 7editado",
+        "price": "1",
         "description": "descripción",
-        "image": "porsche-nineeleven-one.png"
-    },
-    {
-        "id": 8,
-        "name": "Manuel Alejandro",
-        "price": "78",
-        "category": "Lujo",
-        "description": "9",
-        "image": "imagenProducto-1649034374948"
-    },
-    {
-        "id": 9,
-        "name": "Manuel Alejandro",
-        "price": "78",
-        "category": "i",
-        "description": "Un bocho bonito y antaño",
-        "image": "imagenProducto-1649034414263"
+        "image": "porsche-stepingOut.jpg"
     }
 ]
