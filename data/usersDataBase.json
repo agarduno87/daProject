@@ -74,5 +74,11 @@
   "Apellido": "jjj",
   "email": "l@gmail.com",
   "constrasena": "a"
+ },
+ {
+  "name": "prueba",
+  "Apellido": "",
+  "email": "l@gmail.com",
+  "constrasena": "a"
  }
 ]
