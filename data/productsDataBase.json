@@ -1,1 +1,9 @@
-[{"id":"711","name":"vOCHIDO EDITADO","price":"0","description":"bOCHIDO DE LUISITO COMUNICA","imagenProducto":"","image":"imagenProducto-1649437940296"},{"id":"7111","name":"prueba 2","price":"1","category":"i","description":"Carro de prueba","image":"imagenProducto-1649439402211"}]
+[
+ {
+  "id": "7111",
+  "name": "prueba 2a",
+  "price": "1",
+  "description": "Carro de prueba",
+  "image": "imagenProducto-1649439402211"
+ }
+]
