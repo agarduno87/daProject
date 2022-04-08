@@ -1,8 +1,9 @@
 [
- {
-  "id": "71",
-  "name": "bocho editado",
-  "price": "76",
-  "description": "Un bocho bonito y antaño"
- }
+    {
+        "id": "71",
+        "name": "bocho editado1",
+        "price": "76",
+        "description": "Un bocho bonito y antaño",
+        "image": "error.png"
+    }
 ]
