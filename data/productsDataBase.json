@@ -14,5 +14,14 @@
   "description": "bOCHIDO DE LUISITO COMUNICA",
   "imagenProducto": "bocho.jpg",
   "image": "imagenProducto-1649443739689"
+ },
+ {
+  "id": "711111",
+  "name": "bocho editado",
+  "price": "78",
+  "category": "categoria",
+  "description": "7",
+  "imagenProducto": "bocho.jpg",
+  "image": "imagenProducto-1649443868555"
  }
 ]
