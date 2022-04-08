@@ -111,7 +111,7 @@ Julio Añoveros
 Alejandro  
 
 - GitHub [@AlexDDks](https://github.com/AlexDDks)
-- LinkedIn [@AlexDDks](https://www.linkedin.com/in/y)
+- LinkedIn [@AlexDDks]( )
 
 Antonio Garduño
 
@@ -122,7 +122,7 @@ Antonio Garduño
 Carlos Aguilar
 
 - GitHub [@cartuga](https://github.com/cartuga )
-- LinkedIn [@cartuga](https://www.linkedin.com/in/o/)
+- LinkedIn [@cartuga]( )
 
 ## Acknowledgements
 

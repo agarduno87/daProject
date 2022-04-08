@@ -142,7 +142,7 @@ SPRINT 5:
 Registro de usuarios(formulario funcional/estructura de archivos y directorio) - toño
 
 *** Falta hacer que el boton de submit haga el envio de datos al a BD y los guarde ***
-*** Esto es para el archivo de signup y el registro de ususarios ***
+*** Esto es para el archivo de signup y el registro de archivos ***
 
 Middlewares - Alex
 Header inicio - Alex
